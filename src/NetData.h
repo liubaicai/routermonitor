@@ -87,7 +87,7 @@ void parseNetDataResponse(WiFiClient &client, NetChartData &data)
 
 bool getNetDataInfoWithDimension(String chartID, NetChartData &data, String dimensions_filter)
 {
-    const char *NETDATA_HOST = "192.168.100.1";
+    const char *NETDATA_HOST = "192.168.2.1";
     int NETDATA_PORT = 19999;
     // String reqRes = "/api/v0/data?chart=sensors.temp_thermal_zone0_thermal_thermal_zone0&format=json&points=9&group=average&gtime=0&options=s%7Cjsonwrap%7Cnonzero&after=-10";
     String reqRes = "/api/v1/data?chart=" + chartID + "&format=json&points=1&group=average&gtime=0&options=s%7Cjsonwrap%7Cnonzero&after=-2";
